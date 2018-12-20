@@ -169,7 +169,11 @@
     <Compile Include="Controllers\BangSanPhamController.cs" />
     <Compile Include="Controllers\CashBillDetailsController.cs" />
     <Compile Include="Controllers\CashBillsController.cs" />
+    <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InstallmentBillDetailsController.cs" />
+    <Compile Include="Controllers\InstallmentBillsController.cs" />
+    <Compile Include="Controllers\ProductTypesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -311,6 +315,26 @@
     <Content Include="Views\CashBillDetails\Details.cshtml" />
     <Content Include="Views\CashBillDetails\Edit.cshtml" />
     <Content Include="Views\CashBillDetails\Index.cshtml" />
+    <Content Include="Views\ProductTypes\Create.cshtml" />
+    <Content Include="Views\ProductTypes\Delete.cshtml" />
+    <Content Include="Views\ProductTypes\Details.cshtml" />
+    <Content Include="Views\ProductTypes\Edit.cshtml" />
+    <Content Include="Views\ProductTypes\Index.cshtml" />
+    <Content Include="Views\Customers\Create.cshtml" />
+    <Content Include="Views\Customers\Delete.cshtml" />
+    <Content Include="Views\Customers\Details.cshtml" />
+    <Content Include="Views\Customers\Edit.cshtml" />
+    <Content Include="Views\Customers\Index.cshtml" />
+    <Content Include="Views\InstallmentBills\Create.cshtml" />
+    <Content Include="Views\InstallmentBills\Delete.cshtml" />
+    <Content Include="Views\InstallmentBills\Details.cshtml" />
+    <Content Include="Views\InstallmentBills\Edit.cshtml" />
+    <Content Include="Views\InstallmentBills\Index.cshtml" />
+    <Content Include="Views\InstallmentBillDetails\Create.cshtml" />
+    <Content Include="Views\InstallmentBillDetails\Delete.cshtml" />
+    <Content Include="Views\InstallmentBillDetails\Details.cshtml" />
+    <Content Include="Views\InstallmentBillDetails\Edit.cshtml" />
+    <Content Include="Views\InstallmentBillDetails\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

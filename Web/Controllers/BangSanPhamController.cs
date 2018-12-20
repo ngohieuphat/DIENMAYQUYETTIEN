@@ -136,9 +136,9 @@ namespace Web.Controllers
         // POST: /BangSanPham/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
+        public ActionResult DeleteConfirmed(int ID)
         {
-            Product product = db.Products.Find(id);
+            Product product = db.Products.Find(ID);
             db.Products.Remove(product);
             db.SaveChanges();
             return RedirectToAction("Index");
