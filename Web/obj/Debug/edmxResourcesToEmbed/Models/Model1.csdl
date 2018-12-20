@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DmQT12Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Account">
+    <Key>
+      <PropertyRef Name="Username" />
+    </Key>
+    <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CashBill">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BillCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CustomerName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Shipper" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Note" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="GrandTotal" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="CashBillDetails" Relationship="Self.FK_CashBillDetail_CashBill" FromRole="CashBill" ToRole="CashBillDetail" />
+  </EntityType>
+  <EntityType Name="CashBillDetail">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BillID" Type="Int32" Nullable="false" />
+    <Property Name="ProductID" Type="Int32" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <Property Name="SalePrice" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="CashBill" Relationship="Self.FK_CashBillDetail_CashBill" FromRole="CashBillDetail" ToRole="CashBill" />
+    <NavigationProperty Name="Product" Relationship="Self.FK_CashBillDetail_Product" FromRole="CashBillDetail" ToRole="Product" />
+  </EntityType>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CustomerCode" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="CustomerName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="YearOfBirth" Type="Int32" />
+    <NavigationProperty Name="InstallmentBills" Relationship="Self.FK_InstallmentBill_Customer" FromRole="Customer" ToRole="InstallmentBill" />
+  </EntityType>
+  <EntityType Name="InstallmentBill">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BillCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CustomerID" Type="Int32" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Shipper" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Note" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Method" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Period" Type="Int32" Nullable="false" />
+    <Property Name="GrandTotal" Type="Int32" Nullable="false" />
+    <Property Name="Taken" Type="Int32" Nullable="false" />
+    <Property Name="Remain" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Customer" Relationship="Self.FK_InstallmentBill_Customer" FromRole="InstallmentBill" ToRole="Customer" />
+    <NavigationProperty Name="InstallmentBillDetails" Relationship="Self.FK_InstallmentBillDetail_InstallmentBill" FromRole="InstallmentBill" ToRole="InstallmentBillDetail" />
+  </EntityType>
+  <EntityType Name="InstallmentBillDetail">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BillID" Type="Int32" Nullable="false" />
+    <Property Name="ProductID" Type="Int32" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <Property Name="InstallmentPrice" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="InstallmentBill" Relationship="Self.FK_InstallmentBillDetail_InstallmentBill" FromRole="InstallmentBillDetail" ToRole="InstallmentBill" />
+    <NavigationProperty Name="Product" Relationship="Self.FK_InstallmentBillDetail_Product" FromRole="InstallmentBillDetail" ToRole="Product" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ProductName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ProductTypeID" Type="Int32" Nullable="false" />
+    <Property Name="SalePrice" Type="Int32" Nullable="false" />
+    <Property Name="OriginPrice" Type="Int32" Nullable="false" />
+    <Property Name="InstallmentPrice" Type="Int32" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <Property Name="Avatar" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="Boolean" />
+    <NavigationProperty Name="CashBillDetails" Relationship="Self.FK_CashBillDetail_Product" FromRole="Product" ToRole="CashBillDetail" />
+    <NavigationProperty Name="InstallmentBillDetails" Relationship="Self.FK_InstallmentBillDetail_Product" FromRole="Product" ToRole="InstallmentBillDetail" />
+    <NavigationProperty Name="ProductType" Relationship="Self.FK_Product_ProductType" FromRole="Product" ToRole="ProductType" />
+  </EntityType>
+  <EntityType Name="ProductType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductTypeCode" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ProductTypeName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Products" Relationship="Self.FK_Product_ProductType" FromRole="ProductType" ToRole="Product" />
+  </EntityType>
+  <Association Name="FK_CashBillDetail_CashBill">
+    <End Role="CashBill" Type="Self.CashBill" Multiplicity="1" />
+    <End Role="CashBillDetail" Type="Self.CashBillDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CashBill">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CashBillDetail">
+        <PropertyRef Name="BillID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CashBillDetail_Product">
+    <End Role="Product" Type="Self.Product" Multiplicity="1" />
+    <End Role="CashBillDetail" Type="Self.CashBillDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CashBillDetail">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InstallmentBill_Customer">
+    <End Role="Customer" Type="Self.Customer" Multiplicity="1" />
+    <End Role="InstallmentBill" Type="Self.InstallmentBill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="InstallmentBill">
+        <PropertyRef Name="CustomerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InstallmentBillDetail_InstallmentBill">
+    <End Role="InstallmentBill" Type="Self.InstallmentBill" Multiplicity="1" />
+    <End Role="InstallmentBillDetail" Type="Self.InstallmentBillDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InstallmentBill">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="InstallmentBillDetail">
+        <PropertyRef Name="BillID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InstallmentBillDetail_Product">
+    <End Role="Product" Type="Self.Product" Multiplicity="1" />
+    <End Role="InstallmentBillDetail" Type="Self.InstallmentBillDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="InstallmentBillDetail">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_ProductType">
+    <End Role="ProductType" Type="Self.ProductType" Multiplicity="1" />
+    <End Role="Product" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="ProductTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DmQT12Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Accounts" EntityType="Self.Account" />
+    <EntitySet Name="CashBills" EntityType="Self.CashBill" />
+    <EntitySet Name="CashBillDetails" EntityType="Self.CashBillDetail" />
+    <EntitySet Name="Customers" EntityType="Self.Customer" />
+    <EntitySet Name="InstallmentBills" EntityType="Self.InstallmentBill" />
+    <EntitySet Name="InstallmentBillDetails" EntityType="Self.InstallmentBillDetail" />
+    <EntitySet Name="Products" EntityType="Self.Product" />
+    <EntitySet Name="ProductTypes" EntityType="Self.ProductType" />
+    <AssociationSet Name="FK_CashBillDetail_CashBill" Association="Self.FK_CashBillDetail_CashBill">
+      <End Role="CashBill" EntitySet="CashBills" />
+      <End Role="CashBillDetail" EntitySet="CashBillDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CashBillDetail_Product" Association="Self.FK_CashBillDetail_Product">
+      <End Role="Product" EntitySet="Products" />
+      <End Role="CashBillDetail" EntitySet="CashBillDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InstallmentBill_Customer" Association="Self.FK_InstallmentBill_Customer">
+      <End Role="Customer" EntitySet="Customers" />
+      <End Role="InstallmentBill" EntitySet="InstallmentBills" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InstallmentBillDetail_InstallmentBill" Association="Self.FK_InstallmentBillDetail_InstallmentBill">
+      <End Role="InstallmentBill" EntitySet="InstallmentBills" />
+      <End Role="InstallmentBillDetail" EntitySet="InstallmentBillDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InstallmentBillDetail_Product" Association="Self.FK_InstallmentBillDetail_Product">
+      <End Role="Product" EntitySet="Products" />
+      <End Role="InstallmentBillDetail" EntitySet="InstallmentBillDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_ProductType" Association="Self.FK_Product_ProductType">
+      <End Role="ProductType" EntitySet="ProductTypes" />
+      <End Role="Product" EntitySet="Products" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

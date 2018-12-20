@@ -1,0 +1,105 @@
+﻿@model IEnumerable<Web.Models.Product>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+<table id ="bangsanpham"class="table table-hover">
+    <thead>
+        <tr>
+            
+            <th>
+                ProductCode
+            </th>
+            <th>
+                ProductName
+            </th>
+            <th>
+                ProductTypeID
+            </th>
+            <th>
+                SalePrice
+            </th>
+            <th>
+                OriginPrice
+            </th>
+            <th>
+                InstallmentPrice
+            </th>
+            <th>
+                Quantity
+            </th> 
+
+            <th>Avatar</th>
+            <th>
+                Status
+            </th>
+            
+
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @item.ProductCode
+                </td>
+                <td>
+                    @item.ProductName
+                </td>
+                <td>
+                    @item.ProductTypeID
+                </td>
+                <td>
+                    @item.SalePrice.ToString("N0")
+                </td>
+                <td>
+                    @item.OriginPrice
+                </td>
+                <td>
+                    @item.InstallmentPrice
+                </td>
+                <td>
+                    @item.Quantity
+                </td>
+               
+                <td>
+                    <img src="@Url.Action("Details", new { ID = item.ID})" width="150" height="100" />
+                </td>
+                <td>
+                    @item.Status
+                </td>
+
+                <td>
+
+                    <a href="@Url.Action("Edit",new{ID = item.ID})">
+                        <span class="glyphicon glyphicon-pencil"> |</span>
+                    </a>
+                    <a class="pull-right" href="@Url.Action("Delete",new{id=item.ID})">
+                        <span class=" glyphicon glyphicon-trash"> |</span>
+                    </a>
+                </td>
+            </tr>
+}
+    </tbody>
+
+</table>
+ @section scripts {
+     <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+
+<script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+     <script>
+     $(document).ready( function () {
+    $('#Product').DataTable();
+     } );
+     </script>
+    }
+    

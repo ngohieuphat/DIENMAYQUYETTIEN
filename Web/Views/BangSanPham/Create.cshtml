@@ -1,0 +1,124 @@
+﻿@model Web.Models.Product
+
+@{
+    ViewBag.Title = "Thêm Sản Phẩm Mới";
+}
+
+<h2>Create</h2>
+
+
+@using (Html.BeginForm("Create", "BangSanPham", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>BangSanPham</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ProductCode, "ProductCode", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.ProductCode, new { @class = "from-control" })
+                @Html.ValidationMessageFor(model => model.ProductCode)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ProductName, "ProductName", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.ProductName, new { @class = "from-control" })
+                @Html.ValidationMessageFor(model => model.ProductName)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ProductTypeID, "ProductTypeID", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("ProductTypeID", (IEnumerable<SelectListItem>)ViewData["ProductTypeID"], new { @class = "from-control" })
+                @Html.ValidationMessageFor(model => model.ProductTypeID)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.SalePrice, "SalePrice", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.SalePrice)
+                @Html.ValidationMessageFor(model => model.SalePrice)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.OriginPrice, "OriginPrice", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.OriginPrice)
+                @Html.ValidationMessageFor(model => model.OriginPrice)
+            </div>
+        </div>
+        
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.InstallmentPrice, "InstallmentPrice", new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.InstallmentPrice)
+                    @Html.ValidationMessageFor(model => model.InstallmentPrice)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Quantity, "Quantity", new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Quantity)
+                    @Html.ValidationMessageFor(model => model.Quantity)
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.Label("Avatar ", "Avatar ", new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.TextBox("Avatar", null, new { type = "file", onchange = "readURL(this);" })
+                    @Html.ValidationMessage("Avatar")
+                    <img id="Avatar" src="" />
+                </div>
+            </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Status, "Status", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.Status, new { @class = "from-control" })
+                @Html.ValidationMessageFor(model => model.Status)
+            </div>
+        </div>
+
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Create" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+<script>
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#HinhSP')
+                    .attr('src', e.target.result)
+                    .width(150)
+                    .height(200);
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+</script>
+
+}
+ 
