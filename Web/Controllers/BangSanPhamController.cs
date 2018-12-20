@@ -11,9 +11,11 @@ using System.Transactions;
 
 namespace Web.Controllers
 {
+    [Authorize]
     public class BangSanPhamController : Controller
     {
         private DmQT12Entities db = new DmQT12Entities();
+
 
         // GET: /BangSanPham/
         public ActionResult Index()
