@@ -49,7 +49,15 @@ namespace Web.Controllers
                 if (user != null)
                 {
                     await SignInAsync(user, model.RememberMe);
-                    return RedirectToLocal(returnUrl);
+                    //return RedirectToLocal(returnUrl);
+                    if (model.UserName == "ngohieuphat")
+                    {
+                        return RedirectToAction("Index", "BangSanPham");
+                    }
+                    else
+                    {
+                        return RedirectToLocal(returnUrl);
+                    }
                 }
                 else
                 {
@@ -404,5 +412,7 @@ namespace Web.Controllers
             }
         }
         #endregion
+
+
     }
 }

@@ -1,0 +1,239 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SB Admin 2 - Bootstrap Admin Theme</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="~/Content/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="~/Content/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="~/Content/dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="~/Content/vendor/morrisjs/morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="~/Content/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    
+
+
+  
+</head>
+
+<body class="home option2 ng-scope">
+    <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+       
+        <!-- /.navbar-header -->
+        <!-- /.navbar-top-links -->
+        <div class="navbar-collapse collapse ">
+            @Html.Partial("_LoginPartial")
+        </div>
+  
+        <!-- /.navbar-static-side -->
+    </nav>
+    <div class="main">
+        @RenderBody()
+    </div>
+
+
+
+
+    <div class="footer">
+
+        <footer id="footer">
+            <div class="container">
+                <!-- introduce-box -->
+                <div id="introduce-box" class="row">
+                    <div class="col-md-3">
+                        <div id="address-box">
+                            <a href="~/"><img src="~/Uploads/LogoSample_ByTailorBrands (2).jpg" alt="logo"></a>
+                            <div id="address-list">
+                                <div class="tit-name">Địa chỉ:</div>
+                                <div class="tit-contain">1234/3443 đỗ dân lập</div>
+                                <div class="tit-name">Điện thoại:</div>
+                                <div class="tit-contain">0185585935</div>
+                                <div class="tit-name">Email:</div>
+                                <div class="tit-contain">thienvq97@gmail.com</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="introduce-title">Về chúng tôi</div>
+                                <ul class="introduce-list">
+                                    <li class="item">
+                                        <a href="~/gioi-thieu.html">
+                                            Giới thiệu
+                                        </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="~/content/giao-hang-doi-tra.html">
+                                            Giao hàng - Đổi trả
+                                        </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="~/content/chinh-sach-bao-mat.html">
+                                            Chính sách bảo mật
+                                        </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="~/lien-he.html">
+                                            Liên hệ
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="introduce-title">Trợ giúp</div>
+                                <ul class="introduce-list">
+                                    <li class="item">
+                                        <a href="~/content/huong-dan-mua-hang.html">
+                                            Hướng dẫn mua hàng
+                                        </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="~/content/huong-dan-thanh-toan.html">
+                                            Hướng dẫn thanh toán
+                                        </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="~/content/tai-khoan-giao-dich.html">
+                                            Tài khoản giao dịch
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div id="contact-box" class="ng-scope">
+                            <div class="introduce-title">Liên kết</div>
+                            <div class="social-link">
+                                <a><i class="fa fa-facebook"></i></a>
+                                <a><i class="fa fa-youtube"></i></a>
+                                <a><i class="fa fa-twitter"></i></a>
+                                <a><i class="fa fa-google-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Modals -->
+
+    <div class="modal fade" id="cart" tabindex="-1">
+        <div class="modal-dialog" style="position:initial">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                    <h4 class="modal-title">Shopping Cart</h4>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-hover">
+                        <thead class="thead-inverse">
+                            <tr>
+                                <th>Qty</th>
+                                <th>Item Name</th>
+                                <th>Cost</th>
+                                <th class="text-xs-right">Subtotal</th>
+                            </tr>
+                        </thead>
+                        <tbody id="output"> </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-warning" data-dismiss="modal" style="margin-top: 15px;">Continue Shopping</button><a href="~/Product/Cart" class="btn btn-primary">Proceed to checkout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var shopcart = [];
+        $(document).ready(function () {
+            outputCart();
+            $(".productItem").click(function (e) {
+                e.preventDefault();
+                var iteminfo = $(this.dataset)[0];
+                iteminfo.qty = 1;
+                var itemincart = false;
+                $.each(shopcart, function (index, value) {
+                    //console.log(index + '  ' + value.id);
+                    if (value.id == iteminfo.id) {
+                        value.qty = parseInt(value.qty) + parseInt(iteminfo.qty);
+                        itemincart = true;
+                    }
+                })
+                if (!itemincart) {
+                    shopcart.push(iteminfo);
+                }
+                sessionStorage["sca"] = JSON.stringify(shopcart);
+                outputCart();
+                ///
+            })
+            function outputCart() {
+                if (sessionStorage["sca"] != null) {
+                    shopcart = JSON.parse(sessionStorage["sca"].toString());
+                    console.log(sessionStorage["sca"]);
+                    $('#checkoutdiv').show();
+                }
+                var holderHTML = '';
+                var total = 0;
+                var itemCnt = 0;
+                $.each(shopcart, function (index, value) {
+                    console.log(value);
+                    var stotal = value.qty * value.price;
+                    total += stotal;
+                    itemCnt += parseInt(value.qty);
+                    holderHTML += '<tr><td>' + value.qty + '</td><td>#' + value.id + ' ' + value.name + '</td><td> ' + formatMoney(value.price) + ' </td><td class="text-xs-right"> ' + formatMoney(stotal) + '</td></tr>';
+                })
+                holderHTML += '<tr><td colspan="3" class="text-xs-right">Total</td><td class="text-xs-right">' + formatMoney(total) + '</td></tr>';
+                $('#output').html(holderHTML);
+                $('.total').html(formatMoney(total));
+                $('.items').html(itemCnt);
+            }
+            function formatMoney(n) {
+                return '$' + (n / 100).toFixed(2);
+            }
+        })
+        $(document).ready(function () {
+            var str = location.href.toLowerCase();
+            $("ul.menu li a").each(function () {
+                if (str.indexOf(this.href.toLowerCase()) >= 0) {
+                    $("ul.menu li").removeClass("active");
+                    $(this).parent().addClass("active");
+                }
+            });
+        });
+        $(document).ready(function () {
+            $('.menu-product li.child .open-close').on('click', function () {
+                $(this).removeAttr('href');
+                var element = $(this).parent('li');
+                if (element.hasClass('open')) {
+                    element.removeClass('open');
+                    element.children('ul').slideUp();
+                }
+                else {
+                    element.addClass('open');
+                    element.children('ul').slideDown();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

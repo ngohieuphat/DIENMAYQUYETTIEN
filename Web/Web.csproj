@@ -484,6 +484,8 @@
     <Content Include="Views\InstallmentBillDetails\Details.cshtml" />
     <Content Include="Views\InstallmentBillDetails\Edit.cshtml" />
     <Content Include="Views\InstallmentBillDetails\Index.cshtml" />
+    <Content Include="Views\Shared\_Layoutindex.cshtml" />
+    <Content Include="Views\Home\Detail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
