@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using Web.Models;
 using System.Transactions;
+using System.Threading.Tasks;
 
 namespace Web.Controllers
 {
@@ -15,6 +16,7 @@ namespace Web.Controllers
     public class BangSanPhamController : Controller
     {
         private DmQT12Entities db = new DmQT12Entities();
+        private object ActionContent;
 
 
         // GET: /BangSanPham/
@@ -152,5 +154,7 @@ namespace Web.Controllers
             }
             base.Dispose(disposing);
         }
+     
+
     }
 }

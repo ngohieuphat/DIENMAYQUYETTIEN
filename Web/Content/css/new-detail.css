@@ -1,0 +1,27 @@
+#news .item{
+    padding: 5px;
+}
+#news .item .desc h4 a{
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #3e3d3d;
+    margin: 25px 0 10px 0;
+    display: block;
+}
+#news .item .desc p{
+    color: #818181;
+    font-size: 13px;
+}
+#news .owl-theme .owl-nav .owl-prev{
+    left: 5px;
+}
+#news .owl-theme .owl-nav .owl-next{
+    right: 5px;
+}
+#news .owl-theme .owl-nav [class*=owl-]{
+    top: 22% !important;
+}
+#news .ckeditor{
+    margin-bottom: 50px;
+}

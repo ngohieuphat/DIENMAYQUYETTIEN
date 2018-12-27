@@ -214,3 +214,46 @@ C:\Users\hihi\Downloads\DIENMAYQUYETTIEN\Web.Tests\bin\Debug\Microsoft.Owin.Secu
 C:\Users\hihi\Downloads\DIENMAYQUYETTIEN\Web.Tests\obj\Debug\Web.Tests.csprojResolveAssemblyReference.cache
 C:\Users\hihi\Downloads\DIENMAYQUYETTIEN\Web.Tests\obj\Debug\Web.Tests.dll
 C:\Users\hihi\Downloads\DIENMAYQUYETTIEN\Web.Tests\obj\Debug\Web.Tests.pdb
+D:\New folder (3)\Web.Tests\bin\Debug\Web.Tests.dll.config
+D:\New folder (3)\Web.Tests\bin\Debug\Web.Tests.dll
+D:\New folder (3)\Web.Tests\bin\Debug\Web.Tests.pdb
+D:\New folder (3)\Web.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\New folder (3)\Web.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\New folder (3)\Web.Tests\bin\Debug\Newtonsoft.Json.dll
+D:\New folder (3)\Web.Tests\bin\Debug\System.Web.Helpers.dll
+D:\New folder (3)\Web.Tests\bin\Debug\System.Web.Mvc.dll
+D:\New folder (3)\Web.Tests\bin\Debug\System.Web.Razor.dll
+D:\New folder (3)\Web.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\New folder (3)\Web.Tests\bin\Debug\System.Web.WebPages.dll
+D:\New folder (3)\Web.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+D:\New folder (3)\Web.Tests\bin\Debug\Web.dll
+D:\New folder (3)\Web.Tests\bin\Debug\Microsoft.Owin.dll
+D:\New folder (3)\Web.Tests\bin\Debug\System.Web.Optimization.dll
+D:\New folder (3)\Web.Tests\bin\Debug\Owin.dll
+D:\New folder (3)\Web.Tests\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\New folder (3)\Web.Tests\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+D:\New folder (3)\Web.Tests\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
+D:\New folder (3)\Web.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.dll
+D:\New folder (3)\Web.Tests\bin\Debug\Microsoft.Owin.Security.dll
+D:\New folder (3)\Web.Tests\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+D:\New folder (3)\Web.Tests\bin\Debug\Microsoft.Owin.Security.OAuth.dll
+D:\New folder (3)\Web.Tests\bin\Debug\Web.pdb
+D:\New folder (3)\Web.Tests\bin\Debug\Newtonsoft.Json.xml
+D:\New folder (3)\Web.Tests\bin\Debug\System.Web.Helpers.xml
+D:\New folder (3)\Web.Tests\bin\Debug\System.Web.Mvc.xml
+D:\New folder (3)\Web.Tests\bin\Debug\System.Web.Razor.xml
+D:\New folder (3)\Web.Tests\bin\Debug\System.Web.WebPages.xml
+D:\New folder (3)\Web.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\New folder (3)\Web.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+D:\New folder (3)\Web.Tests\bin\Debug\Microsoft.Owin.xml
+D:\New folder (3)\Web.Tests\bin\Debug\System.Web.Optimization.xml
+D:\New folder (3)\Web.Tests\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\New folder (3)\Web.Tests\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+D:\New folder (3)\Web.Tests\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
+D:\New folder (3)\Web.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.xml
+D:\New folder (3)\Web.Tests\bin\Debug\Microsoft.Owin.Security.xml
+D:\New folder (3)\Web.Tests\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+D:\New folder (3)\Web.Tests\bin\Debug\Microsoft.Owin.Security.OAuth.xml
+D:\New folder (3)\Web.Tests\obj\Debug\Web.Tests.csprojResolveAssemblyReference.cache
+D:\New folder (3)\Web.Tests\obj\Debug\Web.Tests.dll
+D:\New folder (3)\Web.Tests\obj\Debug\Web.Tests.pdb

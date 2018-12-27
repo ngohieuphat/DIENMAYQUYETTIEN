@@ -9,7 +9,31 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Bootstrap Admin Theme</title>
+    <title>Trang chủ | ĐIỆN MÁY QUYẾT TIẾN</title>
+    <!-- Bootstrap styles -->
+    <link rel="stylesheet" href="~/Content/libs/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Content/libs/bootstrap/css/bootstrap-theme.min.css">
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="~/Content/libs/fa/css/font-awesome.min.css">
+    <!-- Flex slider styles -->
+    <link rel="stylesheet" href="~/Content/libs/flexslider/flexslider.css" type="text/css" media="screen" />
+    <!-- Owl Carousel styles -->
+    <link rel="stylesheet" href="~/Content/libs/OwlCarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/Content/libs/OwlCarousel/owl.theme.default.min.css">
+    <!-- Website styles -->
+    <link rel="stylesheet" href="~/Content/css/styles.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="~/Content/css/home.css" type="text/css" media="screen" />
+
+    <!-- jQuery base -->
+    <script src="~/Content/js/jquery1.12.4.min.js" type="text/javascript"></script>
+    <!-- Bootstrap scripts -->
+    <script src="~/Content/libs/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <!-- Full width slider scripts -->
+    <script type="text/javascript" src="~/Content/libs/flexslider/jquery.flexslider.js"></script>
+    <!-- Owl Carousel scripts -->
+    <script src="~/Content/libs/OwlCarousel/owl.carousel.min.js"></script>
+    <!-- Website styles -->
+    <script src="~/Content/js/home.js" type="text/javascript"></script>
 
     <!-- Bootstrap Core CSS -->
     <link href="~/Content/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -26,113 +50,98 @@
     <!-- Custom Fonts -->
     <link href="~/Content/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
-    
 
 
-  
 </head>
+   
+
+
 
 <body class="home option2 ng-scope">
+   
     <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
        
         <!-- /.navbar-header -->
         <!-- /.navbar-top-links -->
-        <div class="navbar-collapse collapse ">
-            @Html.Partial("_LoginPartial")
-        </div>
-  
-        <!-- /.navbar-static-side -->
-    </nav>
-    <div class="main">
-        @RenderBody()
-    </div>
-
-
-
-
-    <div class="footer">
-
-        <footer id="footer">
-            <div class="container">
-                <!-- introduce-box -->
-                <div id="introduce-box" class="row">
-                    <div class="col-md-3">
-                        <div id="address-box">
-                            <a href="~/"><img src="~/Uploads/LogoSample_ByTailorBrands (2).jpg" alt="logo"></a>
-                            <div id="address-list">
-                                <div class="tit-name">Địa chỉ:</div>
-                                <div class="tit-contain">1234/3443 đỗ dân lập</div>
-                                <div class="tit-name">Điện thoại:</div>
-                                <div class="tit-contain">0185585935</div>
-                                <div class="tit-name">Email:</div>
-                                <div class="tit-contain">thienvq97@gmail.com</div>
-                            </div>
-                        </div>
+        <section id="head">
+            <div class="top">
+                <div class="container">
+                    <div class="pull-left hotline">
+                        <p>Hotline: <a href="tel:0123456789">0123456789</a></p>
                     </div>
-                    <div class="col-md-6">
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <div class="introduce-title">Về chúng tôi</div>
-                                <ul class="introduce-list">
-                                    <li class="item">
-                                        <a href="~/gioi-thieu.html">
-                                            Giới thiệu
-                                        </a>
-                                    </li>
-                                    <li class="item">
-                                        <a href="~/content/giao-hang-doi-tra.html">
-                                            Giao hàng - Đổi trả
-                                        </a>
-                                    </li>
-                                    <li class="item">
-                                        <a href="~/content/chinh-sach-bao-mat.html">
-                                            Chính sách bảo mật
-                                        </a>
-                                    </li>
-                                    <li class="item">
-                                        <a href="~/lien-he.html">
-                                            Liên hệ
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="introduce-title">Trợ giúp</div>
-                                <ul class="introduce-list">
-                                    <li class="item">
-                                        <a href="~/content/huong-dan-mua-hang.html">
-                                            Hướng dẫn mua hàng
-                                        </a>
-                                    </li>
-                                    <li class="item">
-                                        <a href="~/content/huong-dan-thanh-toan.html">
-                                            Hướng dẫn thanh toán
-                                        </a>
-                                    </li>
-                                    <li class="item">
-                                        <a href="~/content/tai-khoan-giao-dich.html">
-                                            Tài khoản giao dịch
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                    <div class="navbar-collapse collapse ">
+                        @Html.Partial("_LoginPartial")
                     </div>
-                    <div class="col-md-3">
-                        <div id="contact-box" class="ng-scope">
-                            <div class="introduce-title">Liên kết</div>
-                            <div class="social-link">
-                                <a><i class="fa fa-facebook"></i></a>
-                                <a><i class="fa fa-youtube"></i></a>
-                                <a><i class="fa fa-twitter"></i></a>
-                                <a><i class="fa fa-google-plus"></i></a>
-                            </div>
+
+                </div>
+               
+            </div>
+            <div class="bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-2 logo"><a href="/"><img src="~/Content/img/logo.png" alt="Tiến sơn Logo" /></a></div>
+                        <ul class="col-md-8 menu">
+                            <li><a class="upper" href="#">Trang chủ</a></li>
+
+                        </ul>
+                        <div class="col-md-2 action">
+                            <a href="" class="btn-action btn-search"><i class="fa fa-search" aria-hidden="true"></i></a>
+                            <a href="" class="btn-action btn-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
-        </footer>
+        </section><!-- End header -->
+        
+  
+        <!-- /.navbar-static-side -->
+       
+
+    </nav>
+  
+   
+    <div class="main">
+        @RenderBody()
     </div>
+   
+
+
+
+    
+    <section id="footer">
+        <div class="container">
+            <div class="head">
+                <div class="col-xs-6 col-sm-6 col-md-3">
+                    <h3 class="upper title-foot">Giới thiệu về chúng tôi</h3>
+                    <p style="text-align: justify">Mang đến cho bạn những lựa chọn tốt nhất có thể</p><br />
+                    <p style="text-align: justify">chúng tôi đảm bảo sẽ đưa đến cho Quý khách những lựa chọn tốt nhất, Phù hợp nhất đối với từng nhu cầu của Quý khách. Hân hạnh được phục vụ Quý khác!</p>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-3">
+                    <h3 class="upper title-foot">Liên hệ</h3>
+                    <p>Địa chỉ: 45D/22 Đường D5, Phường 25, TP.Hồ Chí Minh</p>
+                    <p>Điện thoại: 0123456789</p>
+                    <p>Email:ngohipha@gmail.com </p>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-3">
+                    <h3 class="upper title-foot">Dịch vụ</h3>
+                    <p><a href="#">Chuyên Sỉ Lẻ Các Diện Máy</a></p>
+                   
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-3">
+                    <h3 class="upper title-foot">Fanpage</h3>
+                    <div class="fb-page" data-href="https://www.facebook.com/ngohipha/" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/ngohipha/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/ngohipha/">Căn Hộ Gía Tốt - Lựa Chọn Thông Minh Của Gia Đình Trẻ</a></blockquote></div>
+                </div>
+            </div>
+            <div class="foot">
+                <p class="pull-left">© QUYẾT TIẾN  . All rights reserved</p>
+                <ul class="pull-right social">
+                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
     <!-- Modals -->
 

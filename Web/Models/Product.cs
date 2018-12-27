@@ -14,6 +14,8 @@ namespace Web.Models
     
     public partial class Product
     {
+        internal object Title;
+
         public Product()
         {
             this.CashBillDetails = new HashSet<CashBillDetail>();

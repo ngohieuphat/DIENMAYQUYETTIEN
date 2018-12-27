@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'/>
+	<title>jQuery elevateZoom Demo</title>
+	<script src='jquery.min.js'></script>
+	<script src='jquery.elevatezoom.js'></script>
+</head>
+<body>
+<h1>Basic Zoom Example</h1>
+<img class="zoom" src="images/small/image1.png" data-zoom-image="images/large/image1.jpg"/>
+<img class="zoom" src="images/small/image1.png" data-zoom-image="images/large/image1.jpg"/>
+<img class="zoom" src="images/small/image1.png" data-zoom-image="images/large/image1.jpg"/>
+<script>
+    //initiate the plugin and pass the id of the div containing gallery images
+	$(".zoom").elevateZoom({
+		gallery:'gallery_01',
+		cursor: 'pointer',
+		galleryActiveClass: 'active',
+		imageCrossfade: true,
+		loadingIcon: 'http://www.elevateweb.co.uk/spinner.gif',
+		tint:true,
+		tintColour:'#333',
+		tintOpacity:0.5,
+		scrollZoom : true
+	});
+</script>
+</body>
+</html>

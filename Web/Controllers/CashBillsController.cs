@@ -10,6 +10,7 @@ using Web.Models;
 
 namespace Web.Controllers
 {
+    [Authorize]
     public class CashBillsController : Controller
     {
         private DmQT12Entities db = new DmQT12Entities();

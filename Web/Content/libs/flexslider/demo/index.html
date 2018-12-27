@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta content="charset=utf-8">
+  <title>FlexSlider 2</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <!-- Demo CSS -->
+  <link rel="stylesheet" href="../flexslider.css" type="text/css" media="screen" />
+
+  <style>
+    .slide-desc{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-decoration: none;
+      font-family: roboto;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.2);
+    }
+    .slide-desc h3{
+      font-size: 42px;
+      text-transform: uppercase;
+      margin: 0;
+      text-shadow: 3px 3px 5px rgba(140, 140, 140, 1);
+    }
+    .slide-desc p{
+      font-size: 20px;
+      margin: 25px 0;
+    }
+    .slide-desc span{
+      font-size: 24px;
+      border: 2px solid white;
+      padding: 7px 25px;
+      border-radius: 30px;
+      display: inline-block;
+    }
+    .slide-desc sup{
+      font-size: 18px;
+    }
+    .flex-direction-nav a, .flex-direction-nav a:before{
+      width: 50px;
+      height: 70px;
+    }
+    .flex-direction-nav a.flex-prev:before{
+      content: "";
+      background: url(../images/icefullslide_arrows.png) no-repeat top left;
+      background-position: 0px 0px;
+    }
+    .flex-direction-nav a.flex-next:before{
+      content: "";
+      background: url(../images/icefullslide_arrows.png) no-repeat top left;
+      background-position: 0px -70px;
+    }
+    .flex-control-nav{
+      bottom: 20px;
+      z-index: 3;
+    }
+    .flex-control-paging li a{
+      width: 100px;
+      height: 6px;
+      border-radius: 0 !important;
+      background: white;
+      box-shadow: none;
+      -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.4);
+      -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.4);
+      box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.4);
+    }
+    .flex-control-paging li a.flex-active, .flex-control-paging li a:hover{
+      background: #00b7f3;
+    }
+    .flexslider.loading{
+      min-height: 739px;
+      background: url("../images/slider-loader.gif") no-repeat center;
+    }
+    .flexslider.loading .slides, .flexslider.loading .flex-direction-nav, .flexslider.loading .flex-control-paging{
+      display: none;
+    }
+    .flexslider .slides, .flexslider .flex-direction-nav, .flexslider .flex-control-paging{
+      display: block;
+    }
+  </style>
+</head>
+<body style="margin: 0;">
+<div id="home-flexslider">
+  <div class="flexslider loading">
+    <ul class="slides">
+      <li>
+        <a href="http://namlong-real.com/property/can-ho-mizuki-park-binh-chanh/" class="slide-desc">
+          <div>
+            <h3>Căn hộ Mizuki Park</h3>
+            <p>105 Nguyễn trãi</p>
+            <span>1.350.000.000 <sup>vnđ</sup></span>
+          </div>
+        </a>
+        <img src="../images/slider-1.jpg" alt="Căn hộ Mizuki Park"/>
+      </li>
+      <li>
+        <a href="http://namlong-real.com/property/can-ho-mizuki-park-binh-chanh/" class="slide-desc">
+          <div>
+            <h3>Căn hộ Mizuki Park</h3>
+            <p>105 Nguyễn trãi</p>
+            <span>1.350.000.000 <sup>vnđ</sup></span>
+          </div>
+        </a>
+        <img src="../images/slider-2.jpg" alt="DỰ ÁN MIZUKI PARK"></a>
+      </li>
+    </ul>
+  </div>
+</div><!-- End Slider -->
+</div>
+
+<!-- jQuery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.min.js">\x3C/script>')</script>
+
+<!-- FlexSlider -->
+<script defer src="../jquery.flexslider.js"></script>
+
+<script type="text/javascript">
+    $(window).load(function(){
+        $('.flexslider').flexslider({
+            animation: "fade",
+            easing: "swing",
+            animationLoop: true,
+            pauseOnAction: true, // default setting
+            start: function(slider){
+                $('.flexslider').removeClass('loading');
+            },
+            after: function(slider) {
+              /* auto-restart player if paused after action */
+                if (!slider.playing) {
+                    slider.play();
+                }
+            },
+        });
+    });
+</script>
+
+</body>
+</html>

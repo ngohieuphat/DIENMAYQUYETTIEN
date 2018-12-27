@@ -48,9 +48,12 @@
             @Html.DisplayFor(modelItem => item.YearOfBirth)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+            <a href="@Url.Action("Edit",new{ID = item.ID})">
+                <span class="glyphicon glyphicon-pencil"> |</span>
+            </a>
+            <a class="pull-right" href="@Url.Action("Delete",new{id=item.ID})">
+                <span class="glyphicon glyphicon-trash"> |</span>
+            </a>
         </td>
     </tr>
 }

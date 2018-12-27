@@ -1,0 +1,199 @@
+.head-detail {
+    width: 100%;
+    float: left;
+    margin-bottom: 50px;
+}
+.head-detail .head-img{
+    width: 48%;
+    float: left;
+    margin-right: 2%;
+}
+.head-detail .head-img .list-img-product{
+    width: 85%;
+    float: left;
+}
+.head-detail .head-img .list-img-product img{
+    width: 100%;
+}
+.lslide img{
+    border: 1px solid #e5e5e5;
+}
+.head-detail .head-img .list-img-product .owl-controls{
+    position: absolute;
+    width: 15%;
+    float: right;
+    top: 0;
+    left: 102%;
+    margin-top: 0;
+    height: 100%;
+    overflow: hidden;
+}
+.head-detail .head-img .list-img-product .owl-controls .owl-page{
+    width: 100%;
+    opacity: 0.7;
+}
+.head-detail .head-img .list-img-product .owl-controls .owl-page.active{
+    border:1px solid #d02537;
+    opacity: 1;
+}
+.head-detail .head-img .list-img-product .owl-controls .owl-page span{
+    display: none;
+}
+
+.head-detail .item{
+    width: 25%;
+    float: left;
+    margin-right: 2%;
+}
+.head-detail .head-infor{
+    width: 73%;
+    float: left;
+}
+.head-detail .head-infor div{
+    width: 100%;
+    float: left;
+}
+.head-detail .head-infor div h2 {
+    text-transform: uppercase;
+    font-size: 28px;
+}
+.head-detail .head-infor .name p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.head-detail .head-infor .name p span{
+    color: #d02537;
+}
+.head-detail .head-infor .price p {
+    text-decoration: line-through;
+    font-style: italic;
+}
+.head-detail .head-infor div h3 {
+    text-transform: uppercase;
+    font-size: 18px;
+    height: 24px;
+    line-height: 24px;
+    color: #000;
+}
+.head-detail .head-infor .price h3 {
+    color: #d02537;
+    font-weight: bold;
+    font-size: 24px;
+    text-transform: lowercase;
+    margin-bottom: 10px;
+}
+.head-detail .head-infor .color p a {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: #fff;
+    border-radius: 50%;
+    padding:1px;
+    font-size: 10px;
+    line-height: 14px;
+    cursor: pointer;
+    margin: 0px 5px;
+}
+.head-detail .head-infor .color p a span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+.head-detail .head-infor .size span{
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #939393;
+    border: 1px solid #939393;
+    line-height: 20px;
+    height: 20px;
+    display: inline-block;
+    padding: 0px 5px;
+    cursor: pointer;
+    margin: 0px 5px;
+}
+.head-detail .head-infor .size span.active{
+    border: 1px solid #d02537;
+    background: #d8d8d8;
+}
+.head-detail .head-infor .quality .add-quality {
+    width: 30%;
+    margin-right: 2%;
+    float: left;
+}
+.head-detail .head-infor .quality .add-quality span{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border: 1px solid #b8b8b8;
+    margin: 0;
+    cursor: pointer;
+}
+.head-detail .head-infor .quality a{
+    display: inline-block;
+    float: left;
+    min-width: 140px;
+    margin-right: 20px;
+    text-align: center;
+    height: 40px;
+    border: 1px solid #d02537;
+    font-size: 14px;
+    text-transform: uppercase;
+    background: #d02537;
+    color: #fff;
+    line-height: 40px;
+    padding: 0 20px;
+}
+.head-detail .head-infor .quality a:hover {
+    background: #fff;
+    color: #d02537;
+}
+.box{
+    overflow: hidden;
+    float: left;
+    margin-bottom: 40px;
+    width: 100%;
+}
+.title-4{
+    border-bottom: 1px solid #ccc;
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+.title-4 span{
+    border-bottom: 4px solid #d02537;
+    position: relative;
+    top: -3px;
+    padding-bottom: 10px;
+}
+#contact-form input, #contact-form textarea{
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+#contact-form button{
+    display: inline-block;
+    float: left;
+    min-width: 140px;
+    margin-right: 20px;
+    text-align: center;
+    height: 40px;
+    border: 1px solid #d02537;
+    font-size: 14px;
+    background: #d02537;
+    color: #fff;
+    line-height: 40px;
+    padding: 0 20px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    outline: none;
+}
+#contact-form button:hover{
+    color: #d02537;
+    background-color: white;
+}
