@@ -7,6 +7,7 @@ using Web.Models;
 
 namespace Web.Controllers
 {
+    
     public class HomeController : Controller
     {
         private DmQT12Entities db = new DmQT12Entities();
