@@ -325,3 +325,4 @@ D:\New folder (3)\Web\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 D:\New folder (3)\Web\obj\Debug\Web.csprojResolveAssemblyReference.cache
 D:\New folder (3)\Web\obj\Debug\Web.dll
 D:\New folder (3)\Web\obj\Debug\Web.pdb
+D:\DIENMAYQUYETTIEN\Web\obj\Debug\Web.csprojResolveAssemblyReference.cache
