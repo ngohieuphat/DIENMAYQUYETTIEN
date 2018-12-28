@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Web;
 using Web.Controllers;
+using Web.Models;
 
 namespace Web.Tests.Controllers
 {

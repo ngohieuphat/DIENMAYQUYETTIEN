@@ -257,3 +257,12 @@ D:\New folder (3)\Web.Tests\bin\Debug\Microsoft.Owin.Security.OAuth.xml
 D:\New folder (3)\Web.Tests\obj\Debug\Web.Tests.csprojResolveAssemblyReference.cache
 D:\New folder (3)\Web.Tests\obj\Debug\Web.Tests.dll
 D:\New folder (3)\Web.Tests\obj\Debug\Web.Tests.pdb
+D:\DIENMAYQUYETTIEN\Web.Tests\bin\Debug\Castle.Core.dll
+D:\DIENMAYQUYETTIEN\Web.Tests\bin\Debug\Moq.dll
+D:\DIENMAYQUYETTIEN\Web.Tests\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\DIENMAYQUYETTIEN\Web.Tests\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\DIENMAYQUYETTIEN\Web.Tests\bin\Debug\Castle.Core.xml
+D:\DIENMAYQUYETTIEN\Web.Tests\bin\Debug\Moq.pdb
+D:\DIENMAYQUYETTIEN\Web.Tests\bin\Debug\Moq.xml
+D:\DIENMAYQUYETTIEN\Web.Tests\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\DIENMAYQUYETTIEN\Web.Tests\bin\Debug\System.Threading.Tasks.Extensions.xml
