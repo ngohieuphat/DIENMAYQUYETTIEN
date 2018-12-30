@@ -256,7 +256,11 @@
     <Content Include="Content\dist\js\sb-admin-2.min.js" />
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\img\1.png" />
+    <Content Include="Content\img\11111.png" />
     <Content Include="Content\img\2.jpg" />
+    <Content Include="Content\img\22222.jpg" />
+    <Content Include="Content\img\33333.png" />
+    <Content Include="Content\img\44444.jpg" />
     <Content Include="Content\img\logo.png" />
     <Content Include="Content\js\home.js" />
     <Content Include="Content\js\jquery1.12.4.min.js" />
